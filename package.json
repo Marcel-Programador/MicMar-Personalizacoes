@@ -1,0 +1,29 @@
+{
+  "name": "micmar-personalizacoes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marcel-Programador/MicMar-Personalizacoes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marcel-Programador/MicMar-Personalizacoes/issues"
+  },
+  "homepage": "https://github.com/Marcel-Programador/MicMar-Personalizacoes#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}
