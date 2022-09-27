@@ -3,3 +3,21 @@
     margin: 0px;
     box-sizing: border-box;
 }
+
+#container-header {
+    padding: 5px;
+    width: 400px;
+    height: 100px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+}
+ul,#header-li-left {
+    background-color: aquamarine;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+.h-li-left {
+    padding: 5px;
+}
