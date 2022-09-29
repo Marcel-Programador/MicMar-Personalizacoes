@@ -5,19 +5,40 @@
 }
 
 #container-header {
-    padding: 5px;
-    width: 400px;
-    height: 100px;
+    padding: 5px 5px 5px 5px;
+    width: 100%;
+    /* height: 10%; */
     background-color: aqua;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
-ul,#header-li-left {
-    background-color: aquamarine;
+#header-logo {
+    display: grid;
+    grid-area: 'h-logo';
+}
+#header-li-left {
+    background-color: rgb(252, 249, 87);
     list-style-type: none;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-area: 'header-li-left';
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    font-size: 39px;
+    color: red;
 }
 .h-li-left {
-    padding: 5px;
+    padding: 15px;
+}
+#header-li-right {
+    background-color: rgb(216, 132, 35);
+    list-style-type: none;
+    display: grid;
+    grid-area: 'header-li-right';
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    font-size: 39px;
+    color: white;
+}
+.h-li-right {
+    padding: 15px;
 }
