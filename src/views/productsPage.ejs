@@ -1,49 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/homePage.css">
-    <title><%= title %></title>
-</head>
-<body>
-    <header>
-        <div id="container-header-main">
-
-            <div id="container-header-menu">
-                <span>
-                    <img id="header-logo" src="/img/Logo para camiseta preta MOD 1.png" alt="Logo MicMar">
-                </span>
-                <div id="header-form">
-                    <div id="h-form">
-                        <form id="header-form-pesquisa" action="/buscar" method="get">
-                            <input class="header-form-pesquisa-input" type="text" name="pesquisar" placeholder="Digite o que você procura">
-                            <button class="header-form-pesquisa-input">BUSCAR</button>
-                        </form>
-                    </div>
-                    <ul id="header-li-sup">
-                        <li class="h-li-sup"><img src="/img/conta.png" alt="" width="34" hiegth="34"><a href="/contato"><b>Contato</b></a></li>
-                        <li class="h-li-sup"><img src="/img/pedidos.png" alt="" width="34" hiegth="34"><a href="/pedidos"><b>Pedidos</b></a></li>
-                        <li class="h-li-sup"><img src="/img/carrinho.svg" alt="" width="37" hiegth="37"><a href="/carrinho"><b>Carrinho</b></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <ul id="header-li-inf">
-                    <li class="h-li-inf"><a href="/almofadas"><b>Almofadas</b></a></li>
-                    <li class="h-li-inf"><a href="/azuleijos"><b>Azuleijos</b></a></li>
-                    <li class="h-li-inf"><a href="/roupas"><b>Roupas</b></a></li>
-                    <li class="h-li-inf"><a href="/canecas"><b>Canecas</b></a></li>
-                    <li class="h-li-inf"><a href="/chaveiros"><b>Chaveiros</b></a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+<%- include('./partials/head') %>
     <main>
         <span>
             <h1>
-                <b>Em destaque</b>
+                <b>Produtos da categoria escolhida</b>
             </h1>
         </span>
         <section>
@@ -81,10 +40,4 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div id="container-footer">
-            <h3>Aqui sera o footer</h3>
-        </div>
-    </footer>
-</body>
-</html>
+    <%- include('./partials/footer') %>
