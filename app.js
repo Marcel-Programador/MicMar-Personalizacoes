@@ -14,7 +14,7 @@ app.use(homeRoute);
 app.use(productsRoute);
 
 app.use((req, res) => {
-    return res.status(404).send("Solicitação não encontrada")
+    return res.status(404).send({message: "Solicitação não encontrada"})
 })
 
 app.listen(port, () => {
