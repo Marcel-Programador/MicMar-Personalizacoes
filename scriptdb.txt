@@ -54,7 +54,48 @@ INSERT INTO title_impact_page (
     NULL,
     NULL
 );
-    
+
+USE micmar;
+
+CREATE TABLE products (
+	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    category VARCHAR(50) NOT NULL,
+    mark VARCHAR (20) NOT NULL,
+    type VARCHAR (20) NOT NULL,
+    color VARCHAR (20) NOT NULL,
+    quantity INT,
+    costPrice DOUBLE NOT NULL,
+    salePrice DOUBLE NOT NULL,
+    specialPrice DOUBLE NOT NULL,
+    description VARCHAR(300) NOT NULL,
+    img VARCHAR(100)
+);
+
+INSERT INTO products (
+	category,
+    mark,
+    type,
+    color,
+    quantity,
+    costPrice,
+    salePrice,
+    specialPrice,
+    description,
+    img
+) VALUES (
+	'Caneca',
+    'Live',
+    'Porcelana',
+    'Branca',
+    100,
+    6.00,
+    30.00,
+    25.00,
+    'Caneca de porcelana 350ml',
+    NULL
+);
+
+-- SELECT * FROM products;
 -- SELECT * FROM header_menu_client;
 -- SELECT * FROM header_menu_category;
 -- SELECT * FROM title_impact_page;
