@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataType) => {
-    const Homehcl = sequelize.define("Homehcl", {
+    const HomehclModels = sequelize.define("HomehclModels", {
         title_position_1: {
             type: DataType.STRING,
             primaryKey: true,
@@ -22,5 +22,5 @@ module.exports = (sequelize, DataType) => {
         tableName: "header_menu_client",
         timestamps: false,
     });
-    return Homehcl
+    return HomehclModels
 }

@@ -1,56 +1,38 @@
 module.exports = (sequelize, DataType) => {
-    const MainSection = sequelize.define("MainSection", {
-        title_impact_1: {
+    const HomehcaModels = sequelize.define("HomehcaModels", {
+        title_position_1: {
             type: DataType.STRING,
             primaryKey: true,
             autoIncrement: false,
             allowNull: false,            
         },
-        title_impact_2: {
+        title_position_2: {
             type: DataType.STRING,
             primaryKey: true,
             autoIncrement: false,
             allowNull: false,            
         },
-        title_impact_3: {
+        title_position_3: {
             type: DataType.STRING,
             primaryKey: true,
             autoIncrement: false,
             allowNull: false,
         },
-        title_impact_4: {
+        title_position_4: {
             type: DataType.STRING,
             primaryKey: true,
             autoIncrement: false,
             allowNull: false,
         },
-        title_impact_5: {
-            type: DataType.STRING,
-            primaryKey: true,
-            autoIncrement: false,
-            allowNull: false,
-        },
-        title_impact_6: {
-            type: DataType.STRING,
-            primaryKey: true,
-            autoIncrement: false,
-            allowNull: false,
-        },
-        title_impact_7: {
-            type: DataType.STRING,
-            primaryKey: true,
-            autoIncrement: false,
-            allowNull: false,
-        },
-        title_impact_8: {
+        title_position_5: {
             type: DataType.STRING,
             primaryKey: true,
             autoIncrement: false,
             allowNull: false,
         },
     },{
-        tableName: "title_impact_page",
+        tableName: "header_menu_category",
         timestamps: false,
     });
-    return MainSection
+    return HomehcaModels
 }

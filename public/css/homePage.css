@@ -102,8 +102,8 @@ main {
     color: white;
 }
 .h-produtos-image {
-    width: 15.5vw;
-    height: 40vh;
+    max-width: 15.5vw;
+    max-height: 40vh;
 }
 /* Fim main */
 
