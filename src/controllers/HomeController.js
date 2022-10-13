@@ -6,9 +6,9 @@ const HomeController = {
         // console.log(hcl);
         let hca = await HomehcaModels.findOne();
         // console.log(hca);
-        let ms = await MainSectionModels.findOne();
+        let ms = await MainSectionModels.findAll();
         // console.log(ms);
-        let pm = await ProductsModels.findOne();
+        let pm = await ProductsModels.findAll();
         // console.log(pm);
         return res.render("homePage", {title: "MICMAR | HOME", hcl, hca, ms, pm});
     }

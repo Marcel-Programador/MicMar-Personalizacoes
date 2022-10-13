@@ -1,7 +1,7 @@
 const config = {
     username: "root",
     password: "",
-    database: "micmar",
+    database: "micmar_db",
     host: "localhost",
     dialect: "mysql",
 };

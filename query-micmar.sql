@@ -1,6 +1,6 @@
-CREATE DATABASE micmar;
+CREATE DATABASE micmar_db;
 
-USE micmar;
+USE micmar_db;
 
 CREATE TABLE header_menu_client (
     title_position_1 VARCHAR(50) NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE header_menu_category (
 INSERT INTO header_menu_category (title_position_1, title_position_2, title_position_3, title_position_4, title_position_5)
     VALUES ('Almofadas', 'Azuleijos', 'Roupas', 'Canecas', 'Chaveiro');
   
-USE micmar;
+USE micmar_db;
 
 CREATE TABLE title_impact_page (
 	title_impact_1 VARCHAR(50),
@@ -55,7 +55,7 @@ INSERT INTO title_impact_page (
     NULL
 );
 
-USE micmar;
+USE micmar_db;
 
 CREATE TABLE products (
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
@@ -71,33 +71,9 @@ CREATE TABLE products (
     img VARCHAR(100)
 );
 
-INSERT INTO products (
-	category,
-    mark,
-    type,
-    color,
-    quantity,
-    costPrice,
-    salePrice,
-    specialPrice,
-    description,
-    img
-) VALUES (
-	'Caneca',
-    'Live',
-    'Porcelana',
-    'Branca',
-    100,
-    6.00,
-    30.00,
-    25.00,
-    'Caneca de porcelana 350ml',
-    NULL
-);
-
 -- SELECT * FROM products;
 -- SELECT * FROM header_menu_client;
 -- SELECT * FROM header_menu_category;
 -- SELECT * FROM title_impact_page;
 
--- DROP DATABASE micmar;
+-- DROP DATABASE micmar_db;
