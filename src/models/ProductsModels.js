@@ -6,6 +6,12 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             allowNull: true,            
         },
+        theme: {
+            type: DataTypes.STRING,
+            primaryKey: false,
+            autoIncrement: false,
+            allowNull: true,
+        }, 
         category: {
             type: DataTypes.STRING,
             primaryKey: false,

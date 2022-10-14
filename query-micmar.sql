@@ -20,7 +20,7 @@ CREATE TABLE header_menu_category (
 );
 
 INSERT INTO header_menu_category (title_position_1, title_position_2, title_position_3, title_position_4, title_position_5)
-    VALUES ('Almofadas', 'Azuleijos', 'Roupas', 'Canecas', 'Chaveiro');
+    VALUES ('Almofadas', 'Azuleijos', 'Roupas', 'Canecas', 'Chaveiros');
   
 USE micmar_db;
 
@@ -59,6 +59,7 @@ USE micmar_db;
 
 CREATE TABLE products (
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    theme VARCHAR(50) NOT NULL,
     category VARCHAR(50) NOT NULL,
     mark VARCHAR (20) NOT NULL,
     type VARCHAR (20) NOT NULL,

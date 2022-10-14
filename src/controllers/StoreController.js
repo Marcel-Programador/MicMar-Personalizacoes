@@ -1,8 +1,10 @@
 const { HomehclModels, HomehcaModels, ProductsModels } = require("../models");
+const file = require("../helpers/files");
+
 
 const StoreController = {
     store: async (req, res) => {
-        const { category, mark, type, color, quantity, costPrice, salePrice, specialPrice, description } = req.body;
+        const { category, theme, mark, type, color, quantity, costPrice, salePrice, specialPrice, description } = req.body;
         let filename = "shoes-defaut.png";
 
 
@@ -10,11 +12,12 @@ const StoreController = {
           filename = req.file.filename
         }
 
-        if ( !category || !mark || !type || !color || !quantity || !costPrice || !salePrice || !specialPrice || !description ){
+        if ( !category || !theme || !mark || !type || !color || !quantity || !costPrice || !salePrice || !specialPrice || !description ){
             return res.send({message: "Se chegou aqui é porque esqueceu de cadastrar alguma informação"})
         }
 try {
     const product = await ProductsModels.create({
+            theme: theme,
             category: category,
             mark: mark,
             type: type,
