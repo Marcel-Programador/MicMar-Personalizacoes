@@ -2,5 +2,6 @@ package-lock.json
 node_modules
 uploads
 log.txt
-scriptdb.txtquery-micmar.sql
+scriptdb.txt
+query-micmar.sql
 img
