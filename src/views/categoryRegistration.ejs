@@ -1,0 +1,14 @@
+<%- include('./partials/head') %>
+    <main>
+        <section>
+            <h1>Para inserção de categorias</h1>
+            <form method="post" action="/store/category">
+                <div>
+                    <label class="form-label" for="category_opt-id">Categoria</label>
+                    <input type="text" class="form-control" name="category_opt" id="category_opt-id">
+                </div>
+                <button type="submit" class="btn-btn-primary">Enviar</button>
+            </form>
+        </section>
+    </main>
+<%- include('./partials/footer') %>

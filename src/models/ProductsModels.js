@@ -2,7 +2,7 @@ module.exports = (sequelize, DataTypes) => {
     const ProductsModels = sequelize.define("ProductsModels", {
         id: {
             type: DataTypes.INTEGER,
-            primaryKey: false,
+            primaryKey: true,
             autoIncrement: true,
             allowNull: true,            
         },
@@ -72,7 +72,8 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: false,
             allowNull: false,
         },
-    },{
+    },
+    {
         tableName: "products",
         timestamps: false,
     });
