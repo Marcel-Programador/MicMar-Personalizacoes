@@ -72,6 +72,14 @@ CREATE TABLE products (
     img VARCHAR(100)
 );
 
+USE micmar_db;
+
+CREATE TABLE category_options (
+	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    category_opt VARCHAR(50)
+);
+
+-- SELECT * FROM category_options; 
 -- SELECT * FROM products;
 -- SELECT * FROM header_menu_client;
 -- SELECT * FROM header_menu_category;
