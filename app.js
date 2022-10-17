@@ -17,9 +17,9 @@ app.use(express.urlencoded({ extended: false }))
 app.use(logMiddleware)
 app.use(express.json());
 
-app.use(storeRoute);
-app.use(homeRoute);
-app.use(productsRoute);
+app.use("/", homeRoute);
+app.use("/products", productsRoute);
+app.use("/store", storeRoute);
 
 app.use((req, res) => {
     return res.status(404).send({message: "Solicitação não encontrada"})

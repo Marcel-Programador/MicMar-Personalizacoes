@@ -1,47 +1,47 @@
-<%- include('./partials/head') %>
+<%- include('./partials/headLogo') %>
     <main>
         <section>
             <h1>Para inserção de produtos</h1>
             <form method="post" action="/store/products" enctype="multipart/form-data">
                 <div>
                     <label class="form-label" for="theme-id">Tema</label>
-                    <input type="text" class="form-control" name="theme" id="theme-id">
+                    <input type="text" class="form-control" name="theme" id="theme-id" placeholder="Ex. 'Dia dos Pais'">
                 </div>
                 <div>
                     <label class="form-label" for="category-id">Categoria</label>
-                    <input type="text" class="form-control" name="category" id="category-id">
+                    <input type="text" class="form-control" name="category" id="category-id" placeholder="Ex. no singular 'Caneca'">
                 </div>
                 <div>
                     <label class="form-label" for="mark-id">Marca</label>
-                    <input type="text" class="form-control" name="mark" id="mark-id">
+                    <input type="text" class="form-control" name="mark" id="mark-id" placeholder="Marca do item ex. 'Live'">
                 </div>
                 <div>
                     <label class="form-label" for="type-id">Tipo</label>
-                    <input type="text" class="form-control" name="type" id="type-id">
+                    <input type="text" class="form-control" name="type" id="type-id" placeholder="Material ex. 'Porcelana'">
                 </div>
                 <div>
                     <label class="form-label" for="color-id">Cor</label>
-                    <input type="text" class="form-control" name="color" id="color-id">
+                    <input type="text" class="form-control" name="color" id="color-id" placeholder="Cor do item">
                 </div>
                 <div>
                     <label class="form-label" for="quantity-id">Quantidade</label>
-                    <input type="number" class="form-control" name="quantity" id="quantity-id">
+                    <input type="number" class="form-control" name="quantity" id="quantity-id" placeholder="Quantidade">
                 </div>
                 <div>
                     <label class="form-label" for="costPrice-id">Custo</label>
-                    <input type="text" class="form-control" name="costPrice" id="costPrice-id">
+                    <input type="text" class="form-control" name="costPrice" id="costPrice-id" placeholder="Preço de custo">
                 </div>
                 <div>
                     <label class="form-label" for="salePrice-id">venda</label>
-                    <input type="text" class="form-control" name="salePrice" id="salePrice-id">
+                    <input type="text" class="form-control" name="salePrice" id="salePrice-id" placeholder="Preço venda">
                 </div>
                 <div>
                     <label class="form-label" for="specialPrice-id">Promoção</label>
-                    <input type="text" class="form-control" name="specialPrice" id="specialPrice-id">
+                    <input type="text" class="form-control" name="specialPrice" id="specialPrice-id" placeholder="Preço promocional">
                 </div>
                 <div>
                     <label class="form-label" for="description-id">Descrição</label>
-                    <input type="text" class="form-control" name="description" id="description-id">
+                    <input type="text" class="form-control" name="description" id="description-id" placeholder="Descrição do item">
                 </div>
                 <div>
                     <label class="form-label" for="img-id">Imagem</label>

@@ -6,7 +6,13 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             allowNull: true,            
         },
-        category_opt: {
+        category_opt_singular: {
+            type: DataTypes.STRING,
+            primaryKey: true,
+            autoIncrement: false,
+            allowNull: true,
+        },
+        category_opt_plural: {
             type: DataTypes.STRING,
             primaryKey: true,
             autoIncrement: false,

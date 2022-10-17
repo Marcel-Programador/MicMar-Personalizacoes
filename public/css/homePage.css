@@ -39,12 +39,16 @@ header {
     justify-content: center;
     grid-gap: 15px;
 }
+#container-title-header-co {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
 #header-li-inf {
     width: 100%;
     background-color: rgb(0, 0, 0);
     display: grid;
-    grid-area: 'header-li-inf';
-    grid-template-columns: auto auto auto auto auto;
+    /* grid-area: 'header-li-inf'; */
+    grid-template-columns: auto;
     justify-items: center;
     font-size: 39px;
     color: aquamarine;
@@ -57,7 +61,7 @@ header {
     /* background-color: rgb(216, 132, 35); */
     list-style-type: none;
     display: grid;
-    grid-area: 'header-li-sup';
+    /* grid-area: 'header-li-sup'; */
     grid-template-columns: auto auto auto;
     color: rgb(0, 0, 0);
     grid-gap: 20px;
@@ -87,12 +91,13 @@ a:hover {
 main {
     padding: 5px 5px 5px 5px;
 }
-#constainer-home-produtos {
+#container-home-produtos {
     margin-top: 15px;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     justify-content: space-evenly;
     justify-items: center;
+    grid-gap: 20px;
 }
 .home-produtos {
     width: 17vw;

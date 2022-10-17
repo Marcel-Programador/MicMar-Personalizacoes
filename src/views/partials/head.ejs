@@ -30,14 +30,12 @@
                 </div>
 
             </div>
-            <div>
+            <div id="container-title-header-co">
+                <% for (let cat of co){ %>
                 <ul id="header-li-inf">
-                    <li class="h-li-inf"><a href="/products/<%=hca.title_position_1%>"><b><%=hca.title_position_1%></b></a></li>
-                    <li class="h-li-inf"><a href="/products/<%=hca.title_position_2%>"><b><%=hca.title_position_2%></b></a></li>
-                    <li class="h-li-inf"><a href="/products/<%=hca.title_position_3%>"><b><%=hca.title_position_3%></b></a></li>
-                    <li class="h-li-inf"><a href="/products/<%=hca.title_position_4%>"><b><%=hca.title_position_4%></b></a></li>
-                    <li class="h-li-inf"><a href="/products/<%=hca.title_position_5%>"><b><%=hca.title_position_5%></b></a></li>
+                    <li class="h-li-inf"><a href="/products/<%=cat.category_opt_singular%>"><b><%=cat.category_opt_plural%></b></a></li>
                 </ul>
+                <% } %>
             </div>
         </div>
     </header>

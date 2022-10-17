@@ -23,15 +23,16 @@ const StoreController = {
         return res.render("categoryRegistration", {title: "MICMAR | CADASTRO DE CATEGORIA", hcl, hca, co});
     },
     storeCategory: async (req, res) => {
-        const {category_opt} = req.body;
+        const {category_opt_singular, category_opt_plural} = req.body;
 
-console.log(category_opt)
-        if (!category_opt) {
+console.log(category_opt_singular, category_opt_plural)
+        if (!category_opt_singular || !category_opt_plural) {
             return res.send({ message: "Se chegou aqui é porque não cadastrou a categoria" });
         }
     try {
         const categoryOptions = await CategoryOptionsModels.create({
-            category_opt: category_opt
+            category_opt_singular: category_opt_singular,
+            category_opt_plural: category_opt_plural
         });
 
         return res.send({ title: categoryOptions }).status(200);

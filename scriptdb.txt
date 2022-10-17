@@ -76,7 +76,8 @@ USE micmar_db;
 
 CREATE TABLE category_options (
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    category_opt VARCHAR(50)
+	category_opt_singular VARCHAR(50),
+    category_opt_plural VARCHAR(50)
 );
 
 -- SELECT * FROM category_options; 

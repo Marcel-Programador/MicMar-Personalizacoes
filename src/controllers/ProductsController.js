@@ -1,4 +1,4 @@
-const { HomehclModels, HomehcaModels, MainSectionModels, ProductsModels } = require("../models");
+const { HomehclModels, HomehcaModels, MainSectionModels, ProductsModels, CategoryOptionsModels } = require("../models");
 
 const ProductsController = {
     products: async(req, res) => {
@@ -15,7 +15,14 @@ const ProductsController = {
             }
           });
         // console.log(pm);
-        return res.render("productsPage", {title: "MICMAR | PAGINA DE PRODUTOS", hcl, hca, ms, pm});
+        const { id, category_opt } = req.params;
+        let co = await CategoryOptionsModels.findAll({
+          options: {
+              id: id,
+              category_opt: category_opt
+        }
+        });
+        return res.render("productsPage", {title: "MICMAR | PAGINA DE PRODUTOS", hcl, hca, ms, pm, co});
     }
 };
 module.exports = ProductsController

@@ -1,11 +1,15 @@
-<%- include('./partials/head') %>
+<%- include('./partials/headLogo') %>
     <main>
         <section>
             <h1>Para inserção de categorias</h1>
             <form method="post" action="/store/category">
                 <div>
-                    <label class="form-label" for="category_opt-id">Categoria</label>
-                    <input type="text" class="form-control" name="category_opt" id="category_opt-id">
+                    <label class="form-label" for="category_opt_singular-id">Categoria Singular</label>
+                    <input type="text" class="form-control" name="category_opt_singular" id="category_opt_singular-id" placeholder="Tipo de item ex. 'Caneca'">
+                </div>
+                <div>
+                    <label class="form-label" for="category_opt_plural-id">Categoria Plural</label>
+                    <input type="text" class="form-control" name="category_opt_plural" id="category_opt_plural-id" placeholder="Tipo de item ex. 'Canecas'">
                 </div>
                 <button type="submit" class="btn-btn-primary">Enviar</button>
             </form>

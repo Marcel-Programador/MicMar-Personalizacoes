@@ -1,4 +1,4 @@
-const { HomehclModels, HomehcaModels, MainSectionModels, ProductsModels } = require("../models");
+const { HomehclModels, HomehcaModels, MainSectionModels, ProductsModels, CategoryOptionsModels } = require("../models");
 
 const HomeController = {
     show: async(req, res) => {
@@ -10,7 +10,9 @@ const HomeController = {
         // console.log(ms);
         let pm = await ProductsModels.findAll();
         // console.log(pm);
-        return res.render("homePage", {title: "MICMAR | HOME", hcl, hca, ms, pm});
+        let co = await CategoryOptionsModels.findAll();
+        // console.log(co);
+        return res.render("homePage", {title: "MICMAR | HOME", hcl, hca, ms, pm, co});
     }
 };
 module.exports = HomeController
