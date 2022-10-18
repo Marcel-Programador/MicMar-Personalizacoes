@@ -1,0 +1,65 @@
+<%- include('./partials/headLogo') %>
+    <main>
+        <section>
+            <h1>Para inserção de Usuários</h1>
+            <form method="post" action="/store/users" enctype="multipart/form-data">
+                <div>
+                    <label class="form-label" for="firstName-id"><span>*</span>Nome</label>
+                    <input type="text" class="form-control" name="firstName" id="firstName-id" placeholder="Ex. 'Nome'">
+                </div>
+                <div>
+                    <label class="form-label" for="lastName-id"><span>*</span>Sobrenome</label>
+                    <input type="text" class="form-control" name="lastName" id="lastName-id" placeholder="Ex. 'sobrenome'">
+                </div>
+                <div>
+                    <label class="form-label" for="cpf-id"><span>*</span>CPF</label>
+                    <input type="text" class="form-control" name="cpf" id="cpf-id" placeholder="Apenas numeros">
+                </div>
+                <div>
+                    <label class="form-label" for="cnpj-id"><span>*</span>CNPJ</label>
+                    <input type="text" class="form-control" name="cnpj" id="cnpj-id" placeholder="Apenas numeros'">
+                </div>
+                <div>
+                    <label class="form-label" for="email-id"><span>*</span>e-mail</label>
+                    <input type="email" class="form-control" name="email" id="email-id" placeholder="exemplo@email.com">
+                </div>
+                <div>
+                    <label class="form-label" for="telephone-id">Fone Residencial</label>
+                    <input type="text" class="form-control" name="telephone" id="telephone-id" placeholder="Apenas numeros">
+                </div>
+                <div>
+                    <label class="form-label" for="mobilePhone-id"><span>*</span>Celular</label>
+                    <input type="text" class="form-control" name="mobilePhone" id="mobilePhone-id" placeholder="Apenas numeros">
+                </div>
+                <div>
+                    <label class="form-label" for="professionalPhone-id">Fone Empresa</label>
+                    <input type="text" class="form-control" name="professionalPhone" id="professionalPhone-id" placeholder="Apenas numeros">
+                </div>
+                <div>
+                    <label class="form-label" for="birthDate-id"><span>*</span>Data de nascimento</label>
+                    <input type="date" class="form-control" name="birthDate" id="birthDate-id" placeholder="Apenas numeros">
+                </div>
+                <div>
+                    <label class="form-label" for="genre-id">Gênero</label>
+                    <input type="radio" class="form-control"  value="Masculino" name="genre" id="genre-id">Masculino
+                    <input type="radio" class="form-control"  value="Feminino" name="genre" id="genre-id">Feminino
+                    <input type="radio" class="form-control"  value="naoinformar" name="genre" id="genre-id">Não informar
+                </div>
+                <div>
+                    <label class="form-label" for="password-id"><span>*</span>Senha</label>
+                    <input type="text" class="form-control" name="password" id="password-id" placeholder="Senha">
+                </div>
+                <div>
+                    <label class="form-label" for="passwordConfirmation-id"><span>*</span>Confirmação de sua Senha</label>
+                    <input type="text" class="form-control" name="passwordConfirmation" id="passwordConfirmation-id" placeholder="Confirme sua senha">
+                </div>
+                <div>
+                    <label class="form-label" for="img-id">Imagem</label>
+                    <input type="file" accept="image" class="form-control" name="avatar" id="img-id">
+                </div>
+
+                <button type="submit" class="btn-btn-primary">Enviar</button>
+            </form>  
+        </section>
+    </main>
+<%- include('./partials/footer') %>

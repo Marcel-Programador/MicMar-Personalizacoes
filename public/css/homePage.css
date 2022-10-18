@@ -41,7 +41,7 @@ header {
 }
 #container-title-header-co {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
 }
 #header-li-inf {
     width: 100%;

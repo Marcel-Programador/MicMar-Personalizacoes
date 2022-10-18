@@ -15,11 +15,12 @@ const ProductsController = {
             }
           });
         // console.log(pm);
-        const { id, category_opt } = req.params;
+        const { id, category_opt_singular, category_opt_plural } = req.params;
         let co = await CategoryOptionsModels.findAll({
           options: {
               id: id,
-              category_opt: category_opt
+              category_opt_singular: category_opt_singular,
+              category_opt_plural: category_opt_plural
         }
         });
         return res.render("productsPage", {title: "MICMAR | PAGINA DE PRODUTOS", hcl, hca, ms, pm, co});

@@ -18,7 +18,9 @@ const upload = multer({storage: multerDiskStorage});
 
 router.get("/productRegistration", StoreController.viewProducts);
 router.get("/categoryRegistration", StoreController.viewCategory);
+router.get("/userRegistration", StoreController.viewUsers);
 router.post("/products", upload.single("avatar"), StoreController.storeProduct);
 router.post("/category", StoreController.storeCategory);
+router.post("/users", upload.single("avatar"), StoreController.storeUser);
 
 module.exports = router;

@@ -80,8 +80,28 @@ CREATE TABLE category_options (
     category_opt_plural VARCHAR(50)
 );
 
+USE micmar_db;
+
+CREATE TABLE usersmodels (
+	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    firstName VARCHAR(50) NOT NULL,
+    lastName VARCHAR(100),
+    cpf VARCHAR(11) NOT NULL,
+    cnpj VARCHAR(14) NOT NULL,
+    email VARCHAR (50) NOT NULL,
+    telephone VARCHAR(10),
+    mobilePhone VARCHAR(10),
+    professionalPhone VARCHAR(10),
+    birthDate DATE,
+    genre VARCHAR(15),
+    password VARCHAR(100) NOT NULL,
+	img VARCHAR(100),
+    isAdmin TINYINT NOT NULL
+);
+
+-- SELECT * FROM usersmodels
 -- SELECT * FROM category_options; 
--- SELECT * FROM products;
+-- SELECT * FROM products
 -- SELECT * FROM header_menu_client;
 -- SELECT * FROM header_menu_category;
 -- SELECT * FROM title_impact_page;
