@@ -3,7 +3,7 @@
         <section>
             <h1>Para inserção de categorias</h1>
 
-            <form action="/store/category" method="post">
+            <form action="/edit/category/<%=co.id%>?_method=put" method="post">
                 <div>
                     <label class="form-label" for="category_opt_singular-id">Categoria Singular</label>
                     <input value="<%=co.category_opt_singular%>" type="text" class="form-control" name="category_opt_singular" id="category_opt_singular-id" placeholder="Tipo de item ex. 'Caneca'">
@@ -12,7 +12,7 @@
                     <label class="form-label" for="category_opt_plural-id">Categoria Plural</label>
                     <input value="<%=co.category_opt_plural%>" type="text" class="form-control" name="category_opt_plural" id="category_opt_plural-id" placeholder="Tipo de item ex. 'Canecas'">
                 </div>
-                <button type="submit" class="btn-btn-primary">Cadastrar</button>
+                <button type="submit" class="btn-btn-primary">Atualizar</button>
             </form>
         </section>
     </main>

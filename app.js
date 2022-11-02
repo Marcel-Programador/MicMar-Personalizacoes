@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const storeRoute = require("./src/routes/storeRoute");
+const editRoute = require("./src/routes/editRoute");
 const homeRoute = require("./src/routes/homeRoute");
 const productsRoute = require("./src/routes/productsRoute");
 const port = 3000;
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use("/", homeRoute);
 app.use("/products", productsRoute);
 app.use("/store", storeRoute);
+app.use("/edit", editRoute);
 
 app.use((req, res) => {
     return res.status(404).send({message: "Solicitação não encontrada"})

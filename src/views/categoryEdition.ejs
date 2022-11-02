@@ -1,0 +1,45 @@
+<%- include('./partials/headLogo') %>
+    <main>
+        <section>
+            <h1>Para edição de categorias</h1>
+
+
+                <% for(let categ of co) { %>
+                <form>
+                    <div class="table-container">
+                        <table id="tbl-01">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th class="th-hide">Categoria Singular</th>
+                                    <th class="th-hide">Categoria Plural</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <%= categ.id %>
+                                    </td>
+                                    <td class="th-hide">
+                                        <%= categ.category_opt_singular %>
+                                    </td>
+                                    <td>
+                                        <%= categ.category_opt_plural %>
+                                    </td>
+                                    <td class="table-actions table-img">
+                                        <a href="/edit/categoryEdition/view/<%= categ.id %>" class="display-visible"><img src="/img/view3.png" alt=""></a>
+                                        <a href="/edit/categoryEdition/edit/<%= categ.id %>"><img src="/img/edit.png"></a>
+                                        <a onclick="'<%= categ.id %>','<%= categ.category_opt_singular %>',
+                                        '<%= categ.category_opt_plural %>'"><img src="/img/cancel.png"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+                <% } %>
+        </section>
+    </main>
+<%- include('./partials/footer') %>
