@@ -37,6 +37,7 @@ const EditController = {
         let hca = await HomehcaModels.findOne();
         // console.log(hca);
         let co = await CategoryOptionsModels.findAll();
+        // console.log(co)
         
         let ms = await MainSectionModels.findAll();
         // console.log(ms);
@@ -61,31 +62,30 @@ const EditController = {
     },
 
     editedCategory: async (req, res) => {
-        let co = await CategoryOptionsModels.findOne(
-            {id, category_opt_singular, category_opt_plural} = req.body
-        );
+        const { category_opt_singular, category_opt_plural } = req.body;
+        const { id } = req.params;
+    
+    
+        try {
+          if (!category_opt_singular || !category_opt_plural) {
+            throw Error("Todos os campos devem ser preenchidos!");
+    
+    
+          }
+          const result = await sequelize.transaction(async (t) => {
+            const copt = await CategoryOptionsModels.update({
+                category_opt_singular: category_opt_singular,
+                category_opt_plural: category_opt_plural
+            },
+              {
+                where: { id: id }
+              })
+          })
 
+            return res.send({ title: result }).status(200);
 
-
-
-    try {
-        if (!category_opt_singular || !category_opt_plural) {
-            throw Error("Se chegou aqui é porque não cadastrou a categoria");
-        }
-        const result = await sequelize.transaction(async (t) => {
-        const categoryOptions = await CategoryOptionsModels.update({
-            category_opt_singular: category_opt_singular,
-            category_opt_plural: category_opt_plural
-        },
-        {
-            where: { id: id }
-        });
-    });
-
-        return res.send({ title: result }).status(200);
-
-    } catch (error) {
-            return res.send({ message: "erro: " + error});
+    }   catch (error) {
+            return res.send({ message: "erro: " + error, result});
     }
 },   
 

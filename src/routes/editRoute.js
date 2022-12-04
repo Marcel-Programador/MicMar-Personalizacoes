@@ -24,6 +24,6 @@ router.get("/categoryEdition/edit/:id?", EditController.editCategory);
 router.get("/userEdition", EditController.viewUsers);
 router.post("/products", upload.single("avatar"), EditController.editProduct);
 router.post("/users", upload.single("avatar"), EditController.editUser);
-router.put("/category", EditController.editedCategory);
+router.put("/category/:id", EditController.editedCategory);
 
 module.exports = router;
