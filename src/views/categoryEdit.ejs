@@ -6,15 +6,15 @@
             <form action="/edit/category/<%=categoryResult.id%>?_method=put" method="post">
                 <div class="Product-input">
                     <label for="id">Id:</label>
-                    <input value="<%= co.id %>" type="text" name="id" id="id" disabled />
+                    <input value="<%= categoryResult.id %>" type="text" name="id" id="id" disabled />
                 </div>
                 <div>
                     <label class="form-label" for="category_opt_singular-id">Categoria Singular</label>
-                    <input value="<%=co.category_opt_singular%>" type="text" class="form-control" name="category_opt_singular" id="category_opt_singular-id" placeholder="Tipo de item ex. 'Caneca'">
+                    <input value="<%=categoryResult.category_opt_singular%>" type="text" class="form-control" name="category_opt_singular" id="category_opt_singular-id" placeholder="Tipo de item ex. 'Caneca'">
                 </div>
                 <div>
                     <label class="form-label" for="category_opt_plural-id">Categoria Plural</label>
-                    <input value="<%=co.category_opt_plural%>" type="text" class="form-control" name="category_opt_plural" id="category_opt_plural-id" placeholder="Tipo de item ex. 'Canecas'">
+                    <input value="<%=categoryResult.category_opt_plural%>" type="text" class="form-control" name="category_opt_plural" id="category_opt_plural-id" placeholder="Tipo de item ex. 'Canecas'">
                 </div>
                 <button type="submit" class="btn-btn-primary">Atualizar</button>
             </form>

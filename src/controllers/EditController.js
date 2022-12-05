@@ -58,10 +58,11 @@ const EditController = {
           message: "Nenhum categoria encontrada"
         })
       }
-        return res.render("categoryEdit", { title: "Editando categoria", categoryResult, pm, ms, hcl, hca, co })
+        return res.render("categoryEdit", { title: "MICMAR | EDIÇÂO DE CATEGORIA", categoryResult, pm, ms, hcl, hca, co })
     },
 
     editedCategory: async (req, res) => {
+
         const { category_opt_singular, category_opt_plural } = req.body;
         const { id } = req.params;
     
@@ -82,7 +83,7 @@ const EditController = {
               })
           })
 
-            return res.send({ title: result }).status(200);
+            return res.send({ title: "Alteração realizada com sucesso", result }).status(200);
 
     }   catch (error) {
             return res.send({ message: "erro: " + error, result});
